@@ -9,6 +9,7 @@ export default {
         'card-bg' : "url('/src/assets/img/card.jpg')",
         'flower-bg' : "url('/src/assets/img/flower-bg.svg')",
         'boat-bg' : "url('/src/assets/img/image-205.svg')",
+        'article-bg' : "url('/src/assets/img/article-page-bg.svg')",
       },
     },
   },

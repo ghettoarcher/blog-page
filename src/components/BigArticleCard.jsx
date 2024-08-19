@@ -7,7 +7,7 @@ const BigArticleCard = ({className,category,title,subtitle,date,like,comment,col
         }; 
 
       return(
-            <div className={`${className} flex flex-row px-6 py-6 bg-white border-b-2 cursor-pointer`}>
+            <div className={`${className} flex flex-row px-6 py-6 bg-white hover:bg-slate-100 border-b-2 cursor-pointer`}>
                               <img src={img} alt="article-img"/>
                               <div className="ml-6 flex flex-col justify-between">
                                 <div>

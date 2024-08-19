@@ -13,14 +13,14 @@ const Footer = () => {
               </div>
               </div>
               <div className="flex flex-row mb-10">
-                  <img src="/src/assets/icons/Line-5.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-4.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-3.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-2.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-1.svg" alt=""/>
-                  <img src="/src/assets/icons/Line.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line-5.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line-4.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line-3.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line-2.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line-1.svg" alt=""/>
+                  <img  className="w-full"src="/src/assets/icons/Line.svg" alt=""/>
               </div>
-              <div className="flex flex-row justify-around pb-16 border-b-2 text-black">
+              <div className="flex flex-row justify-between pb-16 border-b-2 text-black">
                     <FooterColumn/>
                     <FooterColumn/>
                     <FooterColumn/>

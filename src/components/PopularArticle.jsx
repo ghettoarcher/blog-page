@@ -1,7 +1,7 @@
 const PopularArticle = () =>{
       return(
-            <div className="bg-card-bg bg-no-repeat flex flex-col justify-between rounded-xl pt-4 pb-6 pl-4 pr-5 text-white" >
-            <div className="text-sm bg-green-500 py-1 px-2 rounded-xl">Popular</div>
+            <div className="bg-card-bg bg-no-repeat bg-cover pl-6 pb-6 pt-5 pr-12 flex flex-col justify-between rounded-xl  text-white" >
+            <div className="max-w-16 text-sm bg-green-500 py-1 px-2 rounded-xl">Popular</div>
             <div>
                 <div className="uppercase text-pink-200 text-xs">Art & Design</div>
                 <div className="text-base font-semibold max-w-48 pt-2 uppercase" >Invisible ink: the weird world of tattoo removal – in&nbsp;pictures</div>
