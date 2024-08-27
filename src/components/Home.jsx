@@ -178,7 +178,7 @@ const Home = () =>{
                                         </div>
                                         
                                     </div>
-                                          <h1 className='text-4xl text-white font-semibold pt-7 px-12 mb-10'>Readers' Choice winners: Your wine country favorites</h1>
+                                          <h1 className='text-4xl text-white font-semibold pt-7 px-12 mb-10'>Readers Choice winners: Your wine country favorites</h1>
                                           <Button text={'Watch photos'}/>
                                 </div>
                                 <div className="flex"><img src="/src/assets/icons/Pagination.svg" alt=""/></div>

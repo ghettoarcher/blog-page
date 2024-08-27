@@ -24,14 +24,14 @@ const Header = () => {
                               <div className="mr-2"><img src="/src/assets/icons/subscription-icon.svg" alt=""/></div>
                               <Subscription/>
                           </div>
-                          <div className="flex flex-row items-center ml-7">
+                          <div className="flex flex-row items-center ml-7 cursor-pointer">
                               <div className="mr-2"><img src="/src/assets/icons/profile.svg" alt=""/></div>
                               <div className="text-base">Sign In</div>
                           </div>
                       </div>
               </div>
               <div className="flex flex-row items-center justify-between pl-7">
-                  <div className="flex flex-row items-center"><img src="/src/assets/icons/freedom.svg" alt=""/>Boston and New York Bear Brunt</div>
+                  <Link to={'/'} className="flex flex-row items-center"><img src="/src/assets/icons/freedom.svg" alt=""/>Boston and New York Bear Brunt</Link>
 
                   <Link to={'/'}><img src="/src/assets/icons/logo.svg" alt=""/></Link>
                   <div className="flex flex-row">
