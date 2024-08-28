@@ -7,15 +7,15 @@ const ProfileCard = ({name,occupation,articlesNum,avatar}) =>{
                         <div className="text-sm pt-1">{occupation}</div>
                         <di className="text-sm font-semibold pt-4">{articlesNum} articles</di>
                         <div className="flex flex-row gap-2 pt-6 pb-8">
-                              <div><img src="/src/assets/icons/facebook-white.svg" alt="" /></div>
-                              <div><img src="/src/assets/icons/twitter-white.svg" alt="" /></div>
-                              <div><img src="/src/assets/icons/instagram-white.svg" alt="" /></div>
+                              <div className="cursor-pointer"><img src="/src/assets/icons/facebook-white.svg" alt="" /></div>
+                              <div className="cursor-pointer"><img src="/src/assets/icons/twitter-white.svg" alt="" /></div>
+                              <div className="cursor-pointer"><img src="/src/assets/icons/instagram-white.svg" alt="" /></div>
                         </div>
                         
                   </div>
-                  <div className=" flex items-center justify-center text-sm py-3 border-t-2 font-semibold">Follow on Universal </div>
+                  <div className=" flex items-center justify-center cursor-pointer hover:bg-slate-100 text-sm py-3 border-t-2 font-semibold">Follow on Universal </div>
             </div>
       )
 }
 
-export default ProfileCard;
+export default ProfileCard

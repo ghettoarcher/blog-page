@@ -2,12 +2,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProfileCard from "../components/ProfileCard";
 import { Link } from "react-router-dom";
-import MaterialOnTheme from "../components/MaterialOnTheme";
 import Tag from "../components/Tag";
 import Feedback from "../components/Feedback";
 import VerticalArticleCard from "../components/VerticalArticleCard";
 import Comments from "../components/Comments";
-const ArticlePage = () =>{
+import ArticleNavigation from "../components/ArticleNavigation";
+
+
+const ArticlePage = ({title,subtitle,postDate,likes,comments,shares,text}) =>{
       return(
             <>
             <Header/>
@@ -17,83 +19,27 @@ const ArticlePage = () =>{
                         <div className="flex flex-col justify-around">
                               <div className="flex flex-row justify-between font-semibold">
                                     <div className="text-xs uppercase text-blue-800 ">Destinations</div>
-                                    <div className="flex flex-row text-sm text-white ">
-                                          <Link to={'/'} className="flex flex-row gap-1 items-center mr-8"><img src="/src/assets/icons/Home.svg" alt="Back home" />Back to main</Link>
-                                          <Link className="flex flex-row mr-5 gap-1"><img src="/src/assets/icons/arrow-left.svg" alt="Previous" />Prev</Link>
-                                          <Link className="flex flex-row gap-1">Next<img src="/src/assets/icons/arrow-right.svg" alt="Next" /></Link>
-                                    </div> 
+                                    <ArticleNavigation/> 
                               </div>
-                              <div className="text-6xl  max-w-2xl mt-12 mb-7 text-white">Five Travel Stories From 2017 to Help You Escape Into the World</div>
-                              <div className="text-lg text-white max-w-xl">From the coastlines of Europe to remote Kodiak Island, Alaska, here are five of our favorite stories to help you explore the world</div>
+                              <div className="text-6xl  max-w-2xl mt-12 mb-7 text-white">{title}</div>
+                              <div className="text-lg text-white max-w-xl">{subtitle}</div>
                               <div className="flex flex-row text-white items-center mt-14 gap-5">
-                                    <div className="text-xs">Aug 6, 10:23 pm</div>
-                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Heart.svg" alt="Likes" />830</div>
-                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Comment.svg" alt="Comments" />19</div>
-                                    <div className="text-sm gap-1 flex flex-row py-2 pl-5 pr-6 rounded-2xl border-2 cursor-pointer"><img src="/src/assets/icons/Share.svg" alt="Shares" />142 shares</div>
-                              </div>
-                              
-                        </div>
-                        <ProfileCard/>
-                  </div>
-            </div>
-            <div className="pt-14">
-                  <div className="container max-w-5xl mx-auto  top-0 right-0">
-                        <div className="max-w-xl text-lg ">
-                        <div>Many geographers are trained in toponymy and cartology, this is not their main preoccupation. Geographers study the space and the temporal database distribution of phenomena,processes, and features as well as the interaction of humans and their environment. Because space and place affect a variety of topics, such as economics, health, climate, plants and animals, geography is highly interdisciplinary. The interdisciplinary nature of the geographical approach depends on an attentiveness to the relationship between physical and human phenomena and its spatial patterns.</div>
-                        <div>
-                              <h3 className="text-2xl font-bold py-8">Integrated Geography</h3>
-                              <p>Geography as a discipline can be split broadly into two main subsidiary fields: human geography and physical geography. The former largely focuses on the built environment and how humans create, view, manage, and influence space. The latter examines the natural environment, and how organisms, climate, soil, water, and landforms produce and interact.</p>
-                              <p className="pt-5">The accompanying text mentions seven outer regions beyond the encircling ocean. The descriptions of five of them have survived. In contrast to the Imago Mundi, an earlier Babylonian world map dating back to the 9th century BC depicted Babylon as being further north from the center of the world, though it is not certain what that center was supposed to represent. </p>
-                              <p className="pt-5">The accompanying text mentions seven outer regions beyond the encircling ocean. The descriptions of five of them have survived. In contrast to the Imago Mundi, an earlier Babylonian world map dating back to the 9th century BC depicted Babylon as being further north from the center of the world, though it is not certain what that center was supposed to represent. </p>
-                        </div>
-                        </div>
-                        
-                  </div>
-            </div>
-            <div>
-                  <div className="container px-5 mx-auto">
-                        <div className="pt-11 pb-7">
-                        <img className="w-full " src="/src/assets/img/Image-221.svg" alt="" />
-                        <div className="border-2 rounded-b-xl flex flex-row items-center justify-between">
-                              <div className="pl-8 text-sm">Geostatistics deal with quantitative data analysis, specifically the application of statistical methodology</div>
-                              <div className="flex flex-row border-l-2 py-3 pl-7">
-                                    <img src="/src/assets/img/avatar.svg" alt="" />
-                                    <div className="flex flex-col pr-9 pl-2">
-                                    <div className="text-sm font-semibold">David Williams</div>
-                                    <div className="text-xs">Architect</div>
-                                    </div>
-                                    
+                                    <div className="text-xs">{postDate}</div>
+                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Heart.svg" alt="Likes" />{likes}</div>
+                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Comment.svg" alt="Comments" />{comments}</div>
+                                    <div className="text-sm gap-1 flex flex-row py-2 pl-5 pr-6 rounded-2xl border-2 cursor-pointer"><img src="/src/assets/icons/Share.svg" alt="Shares" />{shares} shares</div>
                               </div>
                         </div>
-                        </div>
+                        <ProfileCard name={'Mira Anderson'} occupation={'Traveler & Photographer'} articlesNum={82} avatar={"/src/assets/img/image-220.svg"}/>
                   </div>
             </div>
-                  <div className="container max-w-5xl mx-auto flex flex-col">
+
+                  <div className="container max-w-6xl mx-auto flex flex-col pt-14">
                         <div className="flex flex-row">
-                        <div className="max-w-xl text-lg ">
-                              <div>Many geographers are trained in toponymy and cartology, this is not their main preoccupation. Geographers study the space and the temporal database distribution of phenomena,processes, and features as well as the interaction of humans and their environment. Because space and place affect a variety of topics, such as economics, health, climate, plants and animals, geography is highly interdisciplinary. The interdisciplinary nature of the geographical approach depends on an attentiveness to the relationship between physical and human phenomena and its spatial patterns.</div>
-                              <div>
-                                    <p>Geography as a discipline can be split broadly into two main subsidiary fields: human geography and physical geography. The former largely focuses on the built environment and how humans create, view, manage, and influence space. The latter examines the natural environment, and how organisms, climate, soil, water, and landforms produce and interact.</p>
-                                    <p className="pt-5">The accompanying text mentions seven outer regions beyond the encircling ocean. The descriptions of five of them have survived. In contrast to the Imago Mundi, an earlier Babylonian world map dating back to the 9th century BC depicted Babylon as being further north from the center of the world, though it is not certain what that center was supposed to represent. </p>
-                                    <p className="pt-5">The accompanying text mentions seven outer regions beyond the encircling ocean. The descriptions of five of them have survived. In contrast to the Imago Mundi, an earlier Babylonian world map dating back to the 9th century BC depicted Babylon as being further north from the center of the world, though it is not certain what that center was supposed to represent. </p>
-                              </div>
+                        <div className="max-w-3xl text-lg leading-8 ">{text} Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero in error maiores voluptatibus tenetur eveniet ipsa et temporibus. Perspiciatis sequi, pariatur veritatis doloremque corporis nulla tempora sit adipisci recusandae porro reprehenderit voluptatum minus maxime ut maiores labore consequuntur rem magnam molestiae alias provident. Ducimus optio, dignissimos laudantium distinctio eius, vero numquam animi repudiandae officia voluptatum impedit enim quidem eos iusto! Nobis excepturi dicta minima ullam ipsa, itaque vero nisi eaque fuga! Nisi expedita maxime soluta perspiciatis eos. Distinctio voluptates laudantium delectus rerum? Esse iste, reprehenderit atque dignissimos nam fugiat, architecto et quos veritatis omnis voluptatem eos nesciunt! Quod ad quia neque! Non, maxime numquam mollitia pariatur et voluptas deleniti, facere enim error odit incidunt nihil quidem quisquam id? Impedit aperiam nulla consectetur accusamus, assumenda, eum eaque repellendus voluptatibus repudiandae veritatis temporibus. Obcaecati odit amet quis quisquam. Nesciunt molestias optio quia excepturi laudantium. Odio mollitia, placeat illum quod, cum omnis delectus error officiis repudiandae inventore, natus incidunt dolores explicabo! Reiciendis sed veniam exercitationem praesentium facere nam culpa tempore nobis accusamus, unde recusandae earum consequuntur fuga ratione quam quaerat in dignissimos omnis eos autem, vero reprehenderit minus sint porro. Ut repellendus esse, praesentium modi voluptatibus reprehenderit nesciunt, iusto tempore amet accusamus perferendis excepturi sunt doloribus nulla ipsum nobis dolore vitae eum facere incidunt suscipit. Doloribus libero eligendi cumque. Aut fugit doloremque est in sequi omnis nihil sit esse necessitatibus molestias molestiae dolores, consequatur aliquam quo optio ipsum sint commodi qui animi distinctio natus! Fugit, sunt sed qui voluptate et consequuntur porro ducimus doloribus unde deserunt iste corporis maiores veritatis voluptas dolorem ab! Explicabo facilis in tenetur aut distinctio consequatur, rem non numquam, tempora asperiores repellendus excepturi. Magni possimus quo asperiores eaque consequuntur ad corrupti, velit vero harum id fugiat, molestiae ut consequatur doloribus dolores eius facere maxime temporibus excepturi molestias! Praesentium officia rem repellendus quaerat. Aliquam qui sed, natus sit rerum totam voluptatibus a. Ipsa incidunt, tempora dolorem non sapiente sit, aut, hic id nihil doloribus beatae esse impedit possimus dolor tempore! Architecto minima voluptates quia impedit, nam amet soluta optio iure similique unde nemo praesentium veniam, a repellendus qui quaerat. Distinctio, animi adipisci suscipit at accusantium fugiat quisquam maxime corporis modi, temporibus iure natus praesentium, nam similique possimus fugit inventore quas? Quo ex possimus harum enim aliquid ab assumenda eligendi, repellat voluptatum corporis officia vitae error debitis saepe odio fugit et. Id qui quas aut ipsa placeat perspiciatis atque suscipit veniam ratione, facere repellendus aspernatur sit nemo odit! Placeat exercitationem aut alias saepe hic quia quos et numquam aliquam at laudantium dicta ratione cumque repudiandae, temporibus autem dolorem suscipit fugit, maiores eligendi. Magni quidem fuga sint repellat odio rem culpa, dicta alias repudiandae dolores animi voluptate corporis sed cumque, voluptates, rerum soluta in quibusdam similique? Pariatur quis similique iure. Corporis molestias ad enim. Quibusdam voluptatem odit vitae facilis sequi! Laboriosam ab alias nostrum ea blanditiis sunt incidunt, iure maxime earum ut accusamus nemo, error quae dignissimos nam animi consequatur eveniet excepturi eligendi voluptatem! Facere, quasi quo. Reprehenderit minima deserunt voluptatibus dolorum.</div>
+
                         </div>
-                        <MaterialOnTheme img={"/src/assets/img/materialOnTheme.svg"} title={'Application of Postcolonial Theory in the Middle East'} subtitle={'In the essays "Overstating the Arab State", by Nazih Ayubi, and "Is Jordan Palestine?", by Raphael Israel, the authors deal with the psychologically fragmented postcolonial identity.'} views={'1623'} comments={'23'}/>
-                        </div>
-                        <div className="flex flex-row max-w-xl mt-16">
-                              <p className="font-bold text-2xl">Names of places... are not geography... know by heart a whole gazetteer full of them would not, in itself, constitute anyone a geographer. Geography has higher aims than this: it seeks to classify phenomena.</p>
-                              <div className="flex flex-col pl-8">
-                                    <img src="/src/assets/img/avatar.svg" alt="avatar" />
-                                    <div className="text-lg font-semibold">David Williams</div>
-                                    <div className="text-sm">Architect</div>
-                  
-                              </div>
-                        </div>
-                        <div className="max-w-xl mt-7 mb-7">
-                        <p className="text-lg">The Greeks, who were the first to explore geography as both art and science, achieved this through Cartography, Philosophy, and Literature, or through Mathematics. There is some debate about who was the first person to assert that the Earth is spherical in shape, with the credit going either to Parmenides or Pythagoras. Anaxagoras was able to demonstrate that the profile of the Earth was circular by explaining eclipses. However, he still believed that the Earth was a flat disk, as did many of his contemporaries.</p>
-                        <p className="text-lg mt-4">The first rigorous system of latitude and longitude lines is credited to Hipparchus. He employed a sexagesimal system that was derived from Babylonian mathematics.</p>
-                        </div>
-                        <div className=" max-w-xl flex flex-row gap-2 pb-7 mb-7 border-b-2">
+                        <div className="max-w-xl flex flex-row gap-2 pb-7 pt-7 mb-7 border-b-2">
                               <Tag text={"Travel"}/>
                               <Tag text={"Destinations"}/>
                               <Tag text={"Nature"}/>
@@ -101,8 +47,6 @@ const ArticlePage = () =>{
                               <Tag text={"Alaska"}/>
                         </div>
                         <Feedback/>
-                        
-
                   </div>
                   <div className="bg-slate-100">
                         <div className="container max-w-6xl mx-auto px-5">
@@ -111,10 +55,8 @@ const ArticlePage = () =>{
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
-
                               </div>
                         </div>
-                        
                   </div>
                   <Comments/>
                   <Footer/>
