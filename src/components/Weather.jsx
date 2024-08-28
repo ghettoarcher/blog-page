@@ -16,7 +16,7 @@ const Weather = () => {
       return(
             <div className="flex flex-row text-gray-500"> 
                   <img className="mr-2" src="/src/assets/icons/sun.svg" alt=""/>
-                  <div>{`${Math.round(temperature)} °C`}</div>
+                  <div>{`${Math.round(temperature)}°C`}</div>
             </div>
       )
 }
