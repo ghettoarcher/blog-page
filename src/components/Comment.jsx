@@ -1,32 +1,38 @@
 import { useState } from "react"
 
 const Comment = () => {
-      const [like, setLike] = useState(null);
-      const [liked, setLiked] = useState(false);
-
-      const handleLike = () => {
-            if(liked == 0){
-                  setLike(null);
+      const [like, setLike] = useState(10); 
+      const [dislike, setDislike] = useState(2); 
+      const [isLiked, setIsLiked] = useState(false); 
+      const [isDisliked, setIsDisliked] = useState(false);
+    const handleLike = () => {
+        if (isLiked) {
+            setLike(like - 1);
+            setIsLiked(false);
+        } else {
+            setLike(like + 1);
+            if (isDisliked) {
+                setDislike(dislike - 1);
+                setIsDisliked(false);
             }
-        if (liked) {
-            setLike(like - 1); // Уменьшить лайк при повторном нажатии
-        } else {
-            setLike(like + 1); // Увеличить лайк при первом нажатии
+            setIsLiked(true);
         }
+    };
 
-        setLiked(!liked); // Изменить состояние "лайкнут" на противоположное
-    }
-      const [dislike, setDisLike] = useState(null);
-      const [disliked, setDisLiked] = useState(false);
-
-      const handleDisLike = () => {
-        if (disliked) {
-            setDisLike(dislike - 1); // Уменьшить лайк при повторном нажатии
+    const handleDislike = () => {
+        if (isDisliked) {
+            setDislike(dislike - 1)
+            setIsDisliked(false);
         } else {
-            setDisLike(dislike + 1); // Увеличить лайк при первом нажатии
+            setDislike(dislike + 1);
+            if (isLiked) {
+                setLike(like - 1);
+                setIsLiked(false);
+            }
+            setIsDisliked(true);
         }
-        setDisLiked(!disliked); // Изменить состояние "лайкнут" на противоположное
-    }
+    };
+
       
 return(
       <div className="border-t-2 pt-5 flex flex-row items-start gap-4">
@@ -39,8 +45,8 @@ return(
                   <div>In the event, "in places like Iraq and Jordan, leaders of the new sovereign states were brought in from the outside, tailored to suit colonial interests and commitments</div>
                   <div className="flex flex-row gap-4 text-xs pt-4 pb-7">
                         <div className="flex flex-row gap-2 cursor-pointer"><img src="/src/assets/icons/Comment.svg" alt="reply" />Reply</div>
-                        <div className="flex flex-row gap-2 cursor-pointer text-green-500"><img onClick={handleLike} src="/src/assets/icons/like.svg" alt="like" />{like > 0 && <span>{like}</span>}</div>
-                        <div className="flex flex-row gap-2 cursor-pointer text-red-600"><img onClick={handleDisLike} src="/src/assets/icons/dislike.svg" alt="dislike" />{dislike > 0 && <span>{dislike}</span>}</div>
+                        <div onClick={handleLike} className="flex flex-row gap-2 cursor-pointer text-green-500">{like > 0 && <span>{like}</span>}{isLiked ? (<img  src="/src/assets/icons/Aniket-Suvarna-Box-Bxs-like.16.png" alt="like" />) : (<img  src="/src/assets/icons/like.svg" alt="like" />)}</div>
+                        <div onClick={handleDislike} className="flex flex-row gap-2 cursor-pointer text-red-600">{dislike > 0 && <span>{dislike}</span>} {isDisliked ? (<img  src="/src/assets/icons/Aniket-Suvarna-Box-Bxs-dislike.16.png" alt="dislike" />) : (<img  src="/src/assets/icons/dislike.svg" alt="dislike"/>)}</div>
                   </div>
             </div>
       </div>

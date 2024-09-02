@@ -13,7 +13,6 @@ const ArticlePage = ({title,subtitle,postDate,likes,comments,shares,text}) =>{
       return(
             <>
             <Header/>
-            
             <div className="bg-article-bg bg-no-repeat bg-cover py-14 relative  ">
                   <div className="container max-w-5xl px-5 mx-auto">
                         <div className="flex flex-col justify-around">
