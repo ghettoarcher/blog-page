@@ -5,7 +5,7 @@ const ProfileCard = ({name,occupation,articlesNum,avatar}) =>{
                         <img className="w-20 h-20" src={avatar} alt="avatar" />
                         <div className="text-xl font-bold pt-4">{name}</div>
                         <div className="text-sm pt-1">{occupation}</div>
-                        <di className="text-sm font-semibold pt-4">{articlesNum} articles</di>
+                        <div className="text-sm font-semibold pt-4">{articlesNum} articles</div>
                         <div className="flex flex-row gap-2 pt-6 pb-8">
                               <div className="cursor-pointer"><img src="/src/assets/icons/facebook-white.svg" alt="" /></div>
                               <div className="cursor-pointer"><img src="/src/assets/icons/twitter-white.svg" alt="" /></div>

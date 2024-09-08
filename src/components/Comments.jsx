@@ -7,7 +7,7 @@ const Comments = () => {
                         <div className="flex flex-row justify-between pb-8">
                               <div className="flex flex-row gap-3">
                                     <div className="text-4xl font-bold">Comments</div>
-                                    <di className="text-4xl text-gray-400 font-semibold">19</di>
+                                    <div className="text-4xl text-gray-400 font-semibold">19</div>
                               </div>
                               <div className="flex flex-row border-2 py-2 px-3 gap-2 rounded-full hover:bg-slate-100 cursor-pointer">
                                     <img src="/src/assets/icons/Pencil.svg" alt="add comment" />
