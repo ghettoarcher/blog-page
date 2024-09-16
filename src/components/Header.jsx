@@ -2,6 +2,7 @@ import Subscription from "./Subscription"
 import TodayDate from "./TodayDate"
 import Weather from "./Weather"
 import { Link } from "react-router-dom"
+import HeaderCategory from "./HeaderCategory"
 const Header = () => {
       return (
             <header>
@@ -42,23 +43,24 @@ const Header = () => {
               </div>
               
           </div>
-          <div className="categories bg-blue-950 ">
-          <div className="container mx-auto px-5">
-              <ul className="flex flex-row justify-between py-4">
-                  <li className="text-basic text-white cursor-pointer uppercase">NEWS</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Opinion</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Science</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Life</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Travel</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Money</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Art & Design</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Sports</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">People</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Health</li>
-                  <li className="text-basic text-white cursor-pointer uppercase">Education</li>
-              </ul>
-          </div>
-      </div>
+          <div className="categories bg-blue-950">
+  <div className="container mx-auto px-5">
+    <ul className="flex flex-wrap justify-between gap-4 py-4">
+    <HeaderCategory title={"News"}/>
+    <HeaderCategory title={"Travel"}/>
+    <HeaderCategory title={"Business"}/>
+    <HeaderCategory title={"Tech"}/>
+    <HeaderCategory title={"Food"}/>
+    <HeaderCategory title={"Sports"}/>
+    <HeaderCategory title={"World"}/>
+    <HeaderCategory title={"Health"}/>
+    <HeaderCategory title={"Science"}/>
+    <HeaderCategory title={"Politics"}/>
+    <HeaderCategory title={"Entertainment"}/>
+
+    </ul>
+  </div>
+</div>
       </header>
       )
 }

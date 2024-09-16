@@ -9,6 +9,7 @@ import Footer from "./Footer"
 import ColumnsAside from "./ColumnsAside"
 import Header from "./Header"
 import { Outlet,Link} from "react-router-dom"
+import HeaderArticles from "./HeaderArticles"
 const Home = () =>{
       return(
             <>
@@ -16,30 +17,7 @@ const Home = () =>{
             
             <div className="bg-blue-950 py-7">
                 <div className="container mx-auto">
-      
-                    <div className="flex flex-row p-6 justify-between mx-7 bg-gray-700 rounded-md mb-7 ">
-                        <Link to={'article-page'}><div className="flex flex-row items-center px-2  border-r-2 pr-6  border-gray-500 ">
-                                <div className="w-36 text-white mr-4 text-base">25 Songs That Tell Us Where Music Is Going</div>
-                                <div><img src="/src/assets/img/Image-1.png" alt=""/></div>
-                            </div>
-                        </Link>
-                        <div className="flex flex-row items-center px-2  border-r-2 pr-6 border-gray-500  ">
-                            <div className="w-36 text-white mr-4 text-base">These Anci ent Assassins Eat Their Own Kind</div>
-                            <div><img src="/src/assets/img/image-174.png" alt=""/></div>
-                        </div>
-                        <div className="flex flex-row items-center px-2  border-r-2 pr-6 border-gray-500  ">
-                            <div className="w-36 text-white mr-4 text-base">How Do You Teach People to Love Difficult Music?</div>
-                            <div><img src="/src/assets/img/image-175.png" alt=""/></div>
-                        </div>
-                        <div className="flex flex-row items-center px-2 border-r-2 border-gray-500 pr-6">
-                            <div className="w-36 text-white mr-4 text-base">International Soccer’s Man of Mystery</div>
-                            <div><img src="/src/assets/img/Image.png" alt=""/></div>
-                        </div>
-                        <div className="flex flex-row items-center px-2 pr-6">
-                            <div className="w-36 text-white mr-4 text-base">International Soccer’s Man of Mystery</div>
-                            <div><img src="/src/assets/img/Image.png" alt=""/></div>
-                        </div>
-                    </div>
+                    <HeaderArticles/>
                 </div>
                 </div>
                 <div className="bg-blue-950">

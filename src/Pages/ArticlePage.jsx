@@ -1,28 +1,40 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProfileCard from "../components/ProfileCard";
-import { Link } from "react-router-dom";
 import Tag from "../components/Tag";
 import Feedback from "../components/Feedback";
 import VerticalArticleCard from "../components/VerticalArticleCard";
 import Comments from "../components/Comments";
 import ArticleNavigation from "../components/ArticleNavigation";
 import { useState, useEffect } from "react";
-
+import { fetchPavukData } from '../api.js'
 const ArticlePage = ({postDate,likes,comments,shares}) =>{
+      const url = 'https://newsapi.org/v2/everything?q=Apple&from=2024-09-16&sortBy=popularity&apiKey=20a4c3dc4ef54735b2f6bcb467edffd3'
+      const [post, setPost] = useState([]);
 
-      const [post, setPost] = useState([]); // Состояние для хранения списка постов
+      useEffect(() => {
+        async function getData() {
+          try {
+            const data = await fetchPavukData({
+              startDateTime: 1725872952,
+              endDateTime: 1726477752,
+              mediaType: 'News',
+              query: '',
+              skip: 0,
+              limit: 100,
+              token: 'ecb0d860bfb52a045584f0333d2c8aa7'
+            });
+            
+            setPost(data.data[1]);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        }
+    
+        getData();
+      }, []);
+  
 
-    useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=20a4c3dc4ef54735b2f6bcb467edffd3'); // Замените на ваш URL
-            const data = await response.json(); // Парсим JSON-ответ
-            console.log(data.article)
-            setPost(data.articles[21]); // Сохраняем данные в состояние
-        };
-
-        fetchPosts();
-    }, []); // Пустой массив зависимостей означает, что эффект выполнится только один раз, при загрузке компонента
 
       return(
             
@@ -52,7 +64,7 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
 
                   <div className="container max-w-6xl mx-auto flex flex-col pt-14">
 
-                        <div className="max-w-3xl text-lg leading-8 ">{post.content}</div>
+                        <div className="max-w-3xl text-lg leading-8 ">{post.fullText}</div>
 
                         <div className="max-w-xl flex flex-row gap-2 pb-7 pt-7 mb-7 border-b-2">
                               <Tag text={"Travel"}/>
