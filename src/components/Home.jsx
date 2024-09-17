@@ -44,12 +44,12 @@ const Home = () =>{
                             
                         </div>
                         <div className="flex flex-col">
-                                <div className="text-gray-900 text-sm  font-semibold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
-                                <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
-                                <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
-                                <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
-                                <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
-                                <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'} rounded={'rounded-br-xl'}/>
+                                <div className="text-gray-900 text-sm  font-bold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
+                                <RecommendedCategory color={'text-teal-400'} category={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
+                                <RecommendedCategory color={'text-blue-800'} category={"Cars"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
+                                <RecommendedCategory color={'text-purple-400'} category={"Movies"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
+                                <RecommendedCategory color={'text-orange-400'} category={"NFL"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
+                                <RecommendedCategory color={'text-green-400'} category={"Tech Reviews"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'} rounded={'rounded-br-xl'}/>
       
                             </div>
                         </div>
@@ -132,7 +132,7 @@ const Home = () =>{
                                 <BigArticleCard  className={'rounded-b-xl'} category={"Art & Design"} color={'text-purple-500'} date={"Oct 26"} like={'82'} comment={"72"} img={'/src/assets/img/Image-1.svg'} title={'New Contemporary Institute Reverberates in Richmond’s Historic Landscape'} subtitle={"The center, which will open in April, takes a bold look at race and other social issues that still resonate in the region as well as the nation. A new Institute for Contemporary Art is set to open."}/>
       
                             </div>
-                            <div className="flex flex-col ml-7">
+                            <div className="hidden sm:flex flex-col ml-7">
                                 <div className=" text-gray-900 font-semibold bg-white py-4 px-6 border-b-2 rounded-t-xl">Recommended for you</div>
                                 <RecommendedArticle title={'Office Meetings Leave the Office'} img={"/src/assets/img/article-img-7.svg"} postTime={'5 minutes ago'}/>
                                 <RecommendedArticle title={'Experimental Vocal Music in Brooklyn'} img={"/src/assets/img/article-img-5.svg"} postTime={'7 minutes ago'}/>

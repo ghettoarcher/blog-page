@@ -1,6 +1,6 @@
 const ProfileCard = ({name,occupation,articlesNum,avatar}) =>{
       return(
-            <div className="pt-9  border-2 rounded-xl absolute right-44 bg-white">
+            <div className="pt-9 hidden lg:block border-2 rounded-xl absolute right-44 bg-white">
                   <div className="px-12 flex flex-col items-center justify-center">
                         <img className="w-20 h-20" src={avatar} alt="avatar" />
                         <div className="text-xl font-bold pt-4">{name}</div>

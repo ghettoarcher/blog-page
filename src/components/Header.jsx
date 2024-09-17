@@ -32,7 +32,7 @@ const Header = () => {
                       </div>
               </div>
               <div className="flex flex-row items-center justify-between pl-7">
-                  <Link to={'/'} className="flex flex-row items-center text-sm md:text-lg"><img src="/src/assets/icons/freedom.svg" alt=""/>Boston and New York Bear Brunt</Link>
+                  <Link to={'/'} className="hidden md:flex flex-row items-center text-sm md:text-lg"><img src="/src/assets/icons/freedom.svg" alt=""/>Boston and New York Bear Brunt</Link>
 
                   <Link to={'/'}><img src="/src/assets/icons/logo.svg" alt=""/></Link>
                   <div className="flex flex-row">
