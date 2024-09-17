@@ -11,7 +11,7 @@ const Comments = () => {
                               </div>
                               <div className="flex flex-row border-2 py-2 px-3 gap-2 rounded-full hover:bg-slate-100 cursor-pointer">
                                     <img src="/src/assets/icons/Pencil.svg" alt="add comment" />
-                                    <div className="text-sm">Add comment</div>
+                                    <div className="text-sm md:text-base">Add comment</div>
                               </div>
                         </div>
                         <Comment/>

@@ -7,7 +7,7 @@ const Footer = () => {
           <div className="container mx-auto px-5">
               <div className="flex flex-col items-center mt-14 text-black ">
                   <div className="text-4xl font-bold">Subscribe now and get 20% off</div>
-                  <div className="flex flex-row mt-6 mb-16">
+                  <div className="flex flex-row mt-6 mb-16 gap-3">
                       <input className="border-2 rounded-xl mr-2 max-w-52 pl-5 pr-5" type="text" name="" id="" placeholder="Enter your email"/>
                         <Button  text={'Subscribe'}/>
               </div>
