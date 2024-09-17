@@ -26,7 +26,7 @@ const HeaderArticle = ({postnum}) => {
       }
     }
     
-    getTitle()
+    // getTitle()
   }, [])
 
   return (

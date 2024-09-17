@@ -44,7 +44,7 @@ const Home = () =>{
                             
                         </div>
                         <div className="flex flex-col">
-                                <div className="text-gray-900 text-sm font-semibold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
+                                <div className="text-gray-900 text-sm  font-semibold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
                                 <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
                                 <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
                                 <RecommendedCategory color={'text-teal-400'} title={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
@@ -57,51 +57,56 @@ const Home = () =>{
                 </div>
                 <div className="bg-slate-200">
                     <div className="container px-5 mx-auto">
-                        <div className="flex flex-row pt-7 justify-between">
-                        <div className="flex flex-col gap-7">
-                            <div className="flex flex-row gap-7">
-                                <div className="flex flex-col"> 
+                        <div className="flex flex-row pt-7 justify-between gap-7">
+                        <div className="flex flex-row gap-7">
+                            <div className="flex flex-col gap-7">
+                                <div className="flex flex-col"> {/* car */}
                                     <div className="flex flex-row bg-white rounded-t-xl justify-between">
-                                        <div className="max-w-64 pt-8 pl-8">
-                                            <div className="text-sm uppercase text-blue-500">Cars</div>
-                                            <div className="text-2xl font-bold pt-5">The joy of replicas: A $ 5 million car for $ 50,000</div>
-                                            <div className="pt-6 text-sm">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</div>
+                                        <div className="max-w-64 pt-8 pl-8 pb-2">
+                                            <div className="text-xs md:text-sm uppercase text-blue-500">Cars</div>
+                                            <div className="text-sm md:text-2xl font-bold pt-5">The joy of replicas: A $ 5 million car for $ 50,000</div>
+                                            <div className="pt-6 text-sm md:text-base">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</div>
                                         </div>
                                         <div className="pt-3">
                                             <img src="/src/assets/img/car.jpg" alt=""/>
                                         </div>
                                     </div>
                                     <div className="flex flex-row items-center bg-white border-t-2 px-7 py-3  rounded-b-xl text-sm">
-                                        <div className="flex flex-row items-center font-semibold"><img src="/src/assets/img/avatar.svg" className="mr-2" alt=""/>Jessica Miller:</div>
+                                        <div className="flex flex-row items-center font-semibold">
+                                            <img src="/src/assets/img/avatar.svg" className="mr-2" alt=""/>
+                                            <div>Jessica Miller:</div>
+                                        </div>
                                         <div>Even as the ride-hailing service’s future remem…</div>
                                         <div className="flex flex-row text-xs"><img className="ml-2 mr-1" src="/src/assets/icons/Comment.svg" alt="comment"/>324</div>
-      
                                     </div>    
                                 </div>
-                                 <PopularArticle/>
-                                    
-                            </div>
-                            <div className="flex flex-row gap-8 justify-between " >
-                                    <div className="flex flex-col bg-white min-w-64 rounded-xl" >
-                                        <div><img className="rounded-t-xl" src="/src/assets/img/cat.svg" alt=""/></div>
+                                <div className="flex flex-row gap-7">
+                                <div className="flex flex-col self-start bg-white min-w-64 rounded-xl" >
+                                        <img className="rounded-t-xl" src="/src/assets/img/cat.svg" alt="cat"/>
                                         <div className="flex flex-row font-semibold pt-4 px-6 pb-7 max-w-64 rounded-b-xl" >200+ Doomed Cats Saved From Euthanization</div>
-                                    </div>
-                                    <div className="flex flex-col gap-8 " >
+                                </div>
+                                <div className="flex flex-col gap-7">
                                     <MiniArticleCard title={'Is Coffee Bad for Bones?'} subtitle={'Coffee drinkers may excrete more calcium, but it doesn’t appear to weaken bones'} date={'Oct 15'}/>
                                     <MiniArticleCard title={'What We Manufacture'} subtitle={'A global history of the factory and the modern world that all should read'} date={'Oct 14'}/>
-                                    </div>
+                                </div>
+                                    
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-8 justify-between " >
                                     <div className="flex flex-col gap-8 " >
-                                    <MiniArticleCard title={'What We Manufacture'} subtitle={'A global history of the factory and the modern world that all should read'} date={'Oct 14'}/>
-                                    <MiniArticleCard title={'Is Coffee Bad for Bones?'} subtitle={'Coffee drinkers may excrete more calcium, but it doesn’t appear to weaken bones'} date={'Oct 15'}/>
-
+                                        <PopularArticle/>
+                                    <div className="flex flex-col gap-8 " >
+                                        <MiniArticleCard title={'What We Manufacture'} subtitle={'A global history of the factory and the modern world that all should read'} date={'Oct 14'}/>
+                                        <MiniArticleCard title={'Is Coffee Bad for Bones?'} subtitle={'Coffee drinkers may excrete more calcium, but it doesn’t appear to weaken bones'} date={'Oct 15'}/>
+                                    </div>
                                     </div>
                                 </div>
                         </div>
-                        <ColumnsAside/> 
+                        <ColumnsAside/>
                           </div>  
                     </div>
                 </div>
-                
+
                 <div className="flex flex-row bg-slate-200 pb-14">
                     
                     <div className="flex flex-col ml-7 ">
@@ -143,8 +148,8 @@ const Home = () =>{
                 </div>
                 
       
-                <div>
-                    <div className="container mx-auto px-5">
+                <div className="bg-blue-900 mx-auto">
+                    <div className="container mx-auto px-5 py-14">
                         <div className="flex flex-row pb-14">
                             <div className="bg-boat-bg bg-cover bg-no-repeat flex flex-col items-center justify-between rounded-xl pt-11 pb-10 mr-7">
                                 <div className="flex flex-col items-center">
