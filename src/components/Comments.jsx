@@ -2,7 +2,7 @@ import Comment from './Comment'
 import CommentForm from './CommentForm'
 const Comments = () => {
       return(
-            <div className="max-w-3xl mx-auto flex flex-col pt-20 ">
+            <div className="max-w-3xl mx-auto container flex flex-col pt-20 ">
                   <div className="flex flex-col">
                         <div className="flex flex-row justify-between pb-8">
                               <div className="flex flex-row gap-3">
