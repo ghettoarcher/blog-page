@@ -9,7 +9,7 @@ const Header = () => {
           <div className="container mx-auto px-5">
               <div className="flex flex-row justify-between border-b-2  ">
                       <div className="grid  grid-cols-2">
-                          <div className="pe-6 flex flex-row border-r-2 pt-4">
+                      <div className="pe-6 flex flex-row border-r-2 pt-4">
                               <div className="mr-4">
                                   <img src="/src/assets/icons/burger-menu.svg" alt=""/>
                               </div>
@@ -25,13 +25,13 @@ const Header = () => {
                               <div className="mr-2"><img src="/src/assets/icons/subscription-icon.svg" alt=""/></div>
                               <Subscription/>
                           </div>
-                          <div className="flex flex-row items-center ml-7 cursor-pointer">
-                              <div className="mr-2"><img src="/src/assets/icons/profile.svg" alt=""/></div>
-                              <div className="text-base">Sign In</div>
+                          <div className="flex flex-row items-center ml-7 cursor-pointer gap-3">  
+                              <div className="text-sm md:text-base font-bold bg-black text-white p-1">Register</div>
+                              <div className="text-sm md:text-base font-bold">Sign In</div>
                           </div>
                       </div>
               </div>
-              <div className="flex flex-row items-center justify-between pl-7">
+              <div className="flex flex-row items-center justify-between">
                   <Link to={'/'} className="hidden md:flex flex-row items-center text-sm md:text-lg"><img src="/src/assets/icons/freedom.svg" alt=""/>Boston and New York Bear Brunt</Link>
 
                   <Link to={'/'}><img src="/src/assets/icons/logo.svg" alt=""/></Link>

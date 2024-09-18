@@ -12,13 +12,13 @@ const Footer = () => {
                         <Button  text={'Subscribe'}/>
               </div>
               </div>
-              <div className="flex flex-row mb-10 container">
-                  <img  className="w-full"src="/src/assets/icons/Line-5.svg" alt=""/>
-                  <img  className="w-full"src="/src/assets/icons/Line-4.svg" alt=""/>
-                  <img  className="w-full"src="/src/assets/icons/Line-3.svg" alt=""/>
-                  <img  className="w-full"src="/src/assets/icons/Line-2.svg" alt=""/>
-                  <img  className="w-full"src="/src/assets/icons/Line-1.svg" alt=""/>
-                  <img  className="w-full"src="/src/assets/icons/Line.svg" alt=""/>
+              <div className="flex-row mb-10 container hidden lg:flex">
+                  <img src="/src/assets/icons/Line-5.svg" alt=""/>
+                  <img src="/src/assets/icons/Line-4.svg" alt=""/>
+                  <img src="/src/assets/icons/Line-3.svg" alt=""/>
+                  <img src="/src/assets/icons/Line-2.svg" alt=""/>
+                  <img src="/src/assets/icons/Line-1.svg" alt=""/>
+                  <img src="/src/assets/icons/Line.svg" alt=""/>
               </div>
               <div className="flex flex-row justify-between pb-16 border-b-2 text-black">
                     <FooterColumn title={'News'} links={['Nation','World','Politics','Solar Eclipse']}/>

@@ -77,7 +77,7 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
                   </div>
                   <div className="bg-slate-100">
                         <div className="container max-w-6xl mx-auto px-5 ">
-                              <div className="flex flex-row flex-wrap lg:flex-nowrap py-14 justify-between">
+                              <div className="flex flex-row flex-wrap lg:flex-nowrap py-14 justify-between gap-2">
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
                               <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
