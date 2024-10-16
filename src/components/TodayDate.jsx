@@ -7,7 +7,7 @@ const TodayDate = () =>{
       let currentDate = `${weekdayName}, ${monthName} ${day}, ${year}`;
       
       return(
-            <div className="mr-8 text-gray-500 flex-wrap md:flex-nowrap text-sm md:text-lg">{currentDate}</div>
+            <div className="mr-8 text-gray-500 flex-wrap md:flex-nowrap ">{currentDate}</div>
       )
 }
 
