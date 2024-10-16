@@ -1,6 +1,6 @@
 const HeaderCategory = ({title}) =>{
       return(
-            <li className="text-basic text-white cursor-pointer uppercase text-xs sm:text-sm md:text-base lg:text-lg">{title}</li>
+            <li className="text-white cursor-pointer uppercase text-xs sm:text-sm md:text-base">{title}</li>
       )
 }
 

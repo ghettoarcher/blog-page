@@ -26,8 +26,8 @@ const Header = () => {
                               <Subscription/>
                           </div>
                           <div className="flex flex-row items-center ml-7 cursor-pointer gap-3">  
-                              <div className="text-sm md:text-base font-bold bg-black text-white p-1">Register</div>
-                              <div className="text-sm md:text-base font-bold">Sign In</div>
+                              <div className="text-sm font-bold bg-black text-white p-1">Register</div>
+                              <div className="text-sm font-bold">Sign In</div>
                           </div>
                       </div>
               </div>
