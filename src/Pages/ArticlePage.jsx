@@ -9,7 +9,6 @@ import ArticleNavigation from "../components/ArticleNavigation";
 import { useState, useEffect } from "react";
 import { fetchPavukData } from '../api.js'
 const ArticlePage = ({postDate,likes,comments,shares}) =>{
-      const url = 'https://newsapi.org/v2/everything?q=Apple&from=2024-09-16&sortBy=popularity&apiKey=20a4c3dc4ef54735b2f6bcb467edffd3'
       const [post, setPost] = useState([]);
 
       useEffect(() => {
