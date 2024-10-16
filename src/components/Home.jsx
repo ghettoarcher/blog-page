@@ -34,7 +34,7 @@ const Home = () =>{
                                     </div>
                                 </div>
                                 <div className="bottom-0 ml-14">
-                                    <div className="text-sky-700 mb-6">DESTINATIONS</div>
+                                    <div className="text-sky-700 mb-6 text-sm font-bold">DESTINATIONS</div>
                                 <div className="text-4xl text-white mb-11">In Southeast England, White <br/> Cliffs and Fish</div>
                                 <div className="flex flex-row items-center">
                                       <div><Button text={'Read more →'}/></div>
@@ -44,7 +44,7 @@ const Home = () =>{
                             
                         </div>
                         <div className="flex flex-col">
-                                <div className="text-gray-900 text-sm  font-bold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
+                                <div className="text-gray-900 text-sm font-bold bg-white py-5 px-6 border-b-2 rounded-tr-xl uppercase">Recommended for you</div>
                                 <RecommendedCategory color={'text-teal-400'} category={"food"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
                                 <RecommendedCategory color={'text-blue-800'} category={"Cars"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
                                 <RecommendedCategory color={'text-purple-400'} category={"Movies"} subtitle={'For Chicken-Fried Steak, Too Much Is Just Enough'}/>
@@ -63,7 +63,7 @@ const Home = () =>{
                                 <div className="flex flex-col"> {/* car */}
                                     <div className="flex flex-row bg-white rounded-t-xl justify-between">
                                         <div className="max-w-64 pt-8 pl-8 pb-2">
-                                            <div className="text-xs md:text-sm uppercase text-blue-500">Cars</div>
+                                            <div className="text-xs md:text-sm uppercase font-semibold text-blue-500">Cars</div>
                                             <div className="text-sm md:text-2xl font-bold pt-5">The joy of replicas: A $ 5 million car for $ 50,000</div>
                                             <div className="pt-6 text-sm md:text-base">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</div>
                                         </div>
@@ -83,7 +83,7 @@ const Home = () =>{
                                 <div className="flex flex-row gap-7">
                                 <div className="flex flex-col self-start bg-white min-w-64 rounded-xl" >
                                         <img className="rounded-t-xl" src="/src/assets/img/cat.svg" alt="cat"/>
-                                        <div className="flex flex-row font-semibold pt-4 px-6 pb-7 max-w-64 rounded-b-xl" >200+ Doomed Cats Saved From Euthanization</div>
+                                        <div className="flex flex-row font-semibold text-sm pt-4 px-6 pb-7 max-w-64 rounded-b-xl" >200+ Doomed Cats Saved From Euthanization</div>
                                 </div>
                                 <div className="flex flex-col gap-7">
                                     <MiniArticleCard title={'Is Coffee Bad for Bones?'} subtitle={'Coffee drinkers may excrete more calcium, but it doesn’t appear to weaken bones'} date={'Oct 15'}/>
@@ -141,7 +141,7 @@ const Home = () =>{
                                 <RecommendedArticle title={'Are You There, Dad? It’s Me, Alice'} img={"/src/assets/img/article-img-2.svg"} postTime={'15 minutes ago'}/>
                                 <RecommendedArticle title={'The New Punk Look: Lacy and Colorful'} img={"/src/assets/img/article-img.svg"} postTime={'30 minutes ago'}/>
                                 <RecommendedArticle title={'Sunday Best in Harlem and Brooklyn'} img={"/src/assets/img/article-img-1.svg"} postTime={'34 minutes ago'}/>
-                                <div className="text-center bg-white pt-2 pb-3 font-semibold rounded-b-xl cursor-pointer">Read more</div>
+                                <div className="text-center text-sm bg-white pt-2 pb-3 font-semibold rounded-b-xl cursor-pointer">Read more</div>
                 
                             </div>
                     </div>
@@ -161,7 +161,7 @@ const Home = () =>{
                                         </div>
                                         
                                     </div>
-                                          <h1 className='text-4xl text-white font-semibold pt-7 px-12 mb-10'>Readers Choice winners: Your wine country favorites</h1>
+                                          <h1 className='text-3xl text-white font-semibold pt-7 px-12 mb-10'>Readers Choice winners: Your wine country favorites</h1>
                                           <Button text={'Watch photos'}/>
                                 </div>
                                 <div className="flex"><img src="/src/assets/icons/Pagination.svg" alt=""/></div>

@@ -3,8 +3,8 @@ const PopularArticle = () =>{
             <div className="bg-card-bg bg-no-repeat bg-cover min-h-96 pl-6 pb-6 pt-5 pr-12 flex flex-col justify-between rounded-xl  text-white" >
             <div className="max-w-16 text-sm bg-green-500 py-1 px-2 rounded-sm">Popular</div>
             <div>
-                <div className="uppercase text-pink-200 text-xs md:text-base">Art & Design</div>
-                <div className="text-sm md:text-base lg:text-lg font-semibold max-w-48 pt-2 uppercase" >Invisible ink: the weird world of tattoo removal – in&nbsp;pictures</div>
+                <div className="uppercase text-pink-200 text-xs md:text-sm">Art & Design</div>
+                <div className="text-sm md:text-base font-semibold max-w-48 pt-2 uppercase" >Invisible ink: the weird world of tattoo removal – in&nbsp;pictures</div>
                 <div className="flex flex-row pt-2" >
                     <img className="mr-2" src="/src/assets/img/avatar.svg" alt=""/>
                     <div className="flex flex-col gap-1">

@@ -39,10 +39,10 @@ return(
             <img src="/src/assets/img/avatar.svg" alt="avatar" />
             <div className="flex flex-col">
                   <div className="flex flex-row gap-2 items-center">
-                        <div className="text-base font-bold">Ryan Hall</div>
+                        <div className="text-sm font-bold">Ryan Hall</div>
                         <div className="text-xs">July 17, 6:38 pm</div>
                   </div>
-                  <div>In the event, "in places like Iraq and Jordan, leaders of the new sovereign states were brought in from the outside, tailored to suit colonial interests and commitments</div>
+                  <div className="text-sm">In the event, "in places like Iraq and Jordan, leaders of the new sovereign states were brought in from the outside, tailored to suit colonial interests and commitments</div>
                   <div className="flex flex-row gap-4 text-xs pt-4 pb-7">
                         <div className="flex sm:text-sm flex-row gap-2 cursor-pointer"><img src="/src/assets/icons/Comment.svg" alt="reply" />Reply</div>
                         <div onClick={handleLike} className="flex sm:text-sm flex-row gap-2 cursor-pointer text-green-500">{like > 0 && <span>{like}</span>}{isLiked ? (<img  src="/src/assets/icons/Aniket-Suvarna-Box-Bxs-like.16.png" alt="like" />) : (<img  src="/src/assets/icons/like.svg" alt="like" />)}</div>

@@ -6,9 +6,9 @@ const Footer = () => {
             <div>
           <div className="container mx-auto px-5">
               <div className="flex flex-col items-center mt-14 text-black ">
-                  <div className="text-4xl font-bold">Subscribe now and get 20% off</div>
+                  <div className="text-3xl font-bold">Subscribe now and get 20% off</div>
                   <div className="flex flex-row mt-6 mb-16 gap-3">
-                      <input className="border-2 rounded-xl mr-2 max-w-52 pl-5 pr-5" type="text" name="" id="" placeholder="Enter your email"/>
+                      <input className="border-2 rounded-xl mr-2 max-w-52 pl-5 pr-5" type="text" placeholder="Enter your email"/>
                         <Button  text={'Subscribe'}/>
               </div>
               </div>
@@ -32,10 +32,10 @@ const Footer = () => {
                   <div className="flex flex-row items-center  justify-between py-7 border-b-2">
                       <div className="flex flex-row items-center">
                           <a href="#" className="pr-7"><img src="/src/assets/icons/Symbol.svg" alt=""/></a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md lg:text-lg">Contact Us</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md lg:text-lg">Work with Us</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md lg:text-lg">Advertise</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md lg:text-lg">Your Ad Choise</a>
+                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Contact Us</a>
+                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Work with Us</a>
+                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Advertise</a>
+                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Your Ad Choise</a>
                       </div> 
                     <Socials/>
                   </div>

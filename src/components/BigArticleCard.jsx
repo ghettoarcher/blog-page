@@ -11,7 +11,7 @@ const BigArticleCard = ({className,category,title,subtitle,date,like,comment,col
                               <img src={img} alt="article-img"/>
                               <div className="ml-6 flex flex-col justify-between">
                                 <div>
-                                    <div className="flex flex-row justify-between pt-3 px-2">
+                                    <div className="flex flex-row justify-between pt-1 px-2">
                                         <div className={`${color} uppercase text-xs font-semibold`}>{category}</div>
                                         {isBookmarked ? (
                                             <img onClick={clickHandler} src="/src/assets/icons/Bookmark.svg" alt="bookmark" />
@@ -19,14 +19,14 @@ const BigArticleCard = ({className,category,title,subtitle,date,like,comment,col
                                             <img onClick={clickHandler} src="/src/assets/icons/bookmark-red.svg" alt="bookmark-filled" />
                                             )}
                                     </div>
-                                    <div className="mt-4 font-semibold text-xl">{title}</div>
-                                    <div className="mt-3 text-sm md:text-base">{subtitle}</div>
+                                    <div className="mt-4 font-semibold text-lg">{title}</div>
+                                    <div className="mt-3 text-sm ">{subtitle}</div>
                                 </div>
 
-                                  <div className="flex flex-row gap-4 mt-5 text-gray-500 text-xs">
-                                      <div className="mr-2 text-xs md:text-sm">{date}</div>
-                                      <div className="mr-2 flex flex-row text-xs md:text-sm"><img className='mr-1' src="/src/assets/icons/Comment.svg" alt=""/>{comment}</div>
-                                      <div className="flex flex-row text-xs md:text-sm" ><img className='mr-1' src="/src/assets/icons/Heart.svg" alt="like"/>{like}</div>
+                                  <div className="flex flex-row gap-4 mt-3 text-gray-500 text-xs">
+                                      <div className="mr-2 text-xs">{date}</div>
+                                      <div className="mr-2 flex flex-row text-xs"><img className='mr-1' src="/src/assets/icons/Comment.svg" alt=""/>{comment}</div>
+                                      <div className="flex flex-row text-xs" ><img className='mr-1' src="/src/assets/icons/Heart.svg" alt="like"/>{like}</div>
                                   </div>
                               </div>
                           </div>
