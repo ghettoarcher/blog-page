@@ -1,3 +1,6 @@
+import HeartIcon from '/src/assets/icons/Heart.svg';
+import CommentIcon from '/src/assets/icons/Comment.svg';
+
 const PopularArticle = () =>{
       return(
             <div className="bg-card-bg bg-no-repeat bg-cover min-h-96 pl-6 pb-6 pt-5 pr-12 flex flex-col justify-between rounded-xl  text-white" >
@@ -11,8 +14,8 @@ const PopularArticle = () =>{
                         <div className="text-sm">By Sarah Jenkins</div>
                         <div className="flex flex-row text-gray-400 text-xs" >
                             <div className="mr-2">Sept 26</div>
-                            <div className="flex flex-row mr-2"><img className="mr-1" src="/src/assets/icons/Comment.svg" alt=""/>16</div>
-                            <div className="flex flex-row"><img className="mr-1" src="/src/assets/icons/Heart.svg" alt=""/>832</div>
+                            <div className="flex flex-row mr-2"><img className="mr-1" src={CommentIcon} alt=""/>16</div>
+                            <div className="flex flex-row"><img className="mr-1" src={HeartIcon} alt=""/>832</div>
                         </div>
                     </div>
                 </div>

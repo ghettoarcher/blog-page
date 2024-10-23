@@ -6,32 +6,34 @@ import Feedback from "../components/Feedback";
 import VerticalArticleCard from "../components/VerticalArticleCard";
 import Comments from "../components/Comments";
 import ArticleNavigation from "../components/ArticleNavigation";
+import HeartIcon from '/src/assets/icons/Heart.svg';
+import CommentIcon from '/src/assets/icons/Comment.svg';
+import ShareIcon from '/src/assets/icons/Share.svg';
 import { useState, useEffect } from "react";
-import { fetchPavukData } from '../api.js'
+import { useParams } from "react-router-dom";
 const ArticlePage = ({postDate,likes,comments,shares}) =>{
-      const [post, setPost] = useState([]);
-
+      const { title } = useParams(); 
+      const [post, setPost] = useState(null);
       useEffect(() => {
-        async function getData() {
+        const fetchData = async () => {
           try {
-            const data = await fetchPavukData({
-              startDateTime: 1725872952,
-              endDateTime: 1726477752,
-              mediaType: 'News',
-              query: '',
-              skip: 0,
-              limit: 100,
-              token: 'ecb0d860bfb52a045584f0333d2c8aa7'
-            });
-            
-            setPost(data.data[1]);
+            const response = await fetch(`https://newsapi.org/v2/everything?q=${encodeURIComponent(title)}&apiKey=20a4c3dc4ef54735b2f6bcb467edffd3`);
+            const data = await response.json();
+
+            if (data.articles.length > 0) {
+              setPost(data.articles[0]);
+            } else {
+              console.error("No articles found");
+            }
           } catch (error) {
             console.error('Error fetching data:', error);
           }
-        }
+        };
     
-        getData();
-      }, []);
+        fetchData();
+      }, [title]);
+    
+      if (!post) return <div>Loading...</div>;
   
 
 
@@ -39,7 +41,14 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
             
             <>
             <Header/>
-            <div className="bg-article-bg bg-no-repeat bg-cover py-14 relative">
+            <div className="bg-no-repeat bg-cover py-14 relative" 
+            style={{
+          backgroundImage: `url(${post.urlToImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)', // Полупрозрачный черный слой
+          backgroundBlendMode: 'overlay', // Смешивание фона с цветом
+        }}>
                   <div className="container max-w-5xl px-5 mx-auto">
                         <div className="flex flex-col justify-around">
                               <div className="flex flex-row justify-between font-semibold">
@@ -51,9 +60,9 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
                               <div className="flex flex-row text-white items-center mt-14 gap-5">
                                     
                                     <div className="text-xs">{postDate}</div>
-                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Heart.svg" alt="Likes" />{likes}</div>
-                                    <div className="text-xs flex flex-row gap-1"><img src="/src/assets/icons/Comment.svg" alt="Comments" />{comments}</div>
-                                    <div className="text-sm gap-1 flex flex-row py-2 pl-5 pr-6 rounded-2xl border-2 cursor-pointer"><img src="/src/assets/icons/Share.svg" alt="Shares" />{shares} shares</div>
+                                    <div className="text-xs flex flex-row gap-1"><img src={HeartIcon} alt="Likes" />{likes}</div>
+                                    <div className="text-xs flex flex-row gap-1"><img src={CommentIcon} alt="Comments" />{comments}</div>
+                                    <div className="text-sm gap-1 flex flex-row py-2 pl-5 pr-6 rounded-2xl border-2 cursor-pointer"><img src={ShareIcon} alt="Shares" />{shares} shares</div>
                               </div>
                               
                         </div>
@@ -63,7 +72,7 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
 
                   <div className="container max-w-6xl mx-auto flex flex-col pt-14">
 
-                        <div className="max-w-3xl text-lg leading-8 ">{post.fullText}</div>
+                        <div className="max-w-3xl text-lg leading-8 ">{post.content}</div>
 
                         <div className="max-w-xl flex flex-row gap-2 pb-7 pt-7 mb-7 border-b-2">
                               <Tag text={"Travel"}/>

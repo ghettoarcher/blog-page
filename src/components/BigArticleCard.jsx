@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import HeartIcon from '/src/assets/icons/Heart.svg';
+import CommentIcon from '/src/assets/icons/Comment.svg';
 const BigArticleCard = ({className,category,title,subtitle,date,like,comment,color,img}) =>{
     const [isBookmarked , setIsBookmarked] = useState(true);
      const clickHandler = () => {
@@ -25,8 +26,8 @@ const BigArticleCard = ({className,category,title,subtitle,date,like,comment,col
 
                                   <div className="flex flex-row gap-4 mt-3 text-gray-500 text-xs">
                                       <div className="mr-2 text-xs">{date}</div>
-                                      <div className="mr-2 flex flex-row text-xs"><img className='mr-1' src="/src/assets/icons/Comment.svg" alt=""/>{comment}</div>
-                                      <div className="flex flex-row text-xs" ><img className='mr-1' src="/src/assets/icons/Heart.svg" alt="like"/>{like}</div>
+                                      <div className="mr-2 flex flex-row text-xs"><img className='mr-1' src={CommentIcon} alt=""/>{comment}</div>
+                                      <div className="flex flex-row text-xs" ><img className='mr-1' src={HeartIcon} alt="like"/>{like}</div>
                                   </div>
                               </div>
                           </div>
