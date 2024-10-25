@@ -1,6 +1,6 @@
 import MiniArticleCard from "./MiniArticleCard"
 import RecommendedArticle from './RecommendedArticle'
-import BigArticleCard from "./BigArticleCard"
+import BigArticleCards from "./BigArticleCards"
 import RecommendedCategory from "./RecommendedCategory"
 import PopularArticle from "./PopularArticle"
 import Button from "./Button"
@@ -8,7 +8,7 @@ import Player from "./Player"
 import Footer from "./Footer"
 import ColumnsAside from "./ColumnsAside"
 import Header from "./Header"
-import { Outlet,Link} from "react-router-dom"
+import { Outlet} from "react-router-dom"
 import HeaderArticles from "./HeaderArticles"
 const Home = () =>{
       return(
@@ -64,8 +64,8 @@ const Home = () =>{
                                     <div className="flex flex-row bg-white rounded-t-xl justify-between">
                                         <div className="max-w-64 pt-8 pl-8 pb-2">
                                             <div className="text-xs md:text-sm uppercase font-semibold text-blue-500">Cars</div>
-                                            <div className="text-sm md:text-2xl font-bold pt-5">The joy of replicas: A $ 5 million car for $ 50,000</div>
-                                            <div className="pt-6 text-sm md:text-base">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</div>
+                                            <div className="text-sm md:text-2xl font-bold pt-5">The joy of replicas: A $ 5 million car for $ 50,000</div>
+                                            <div className="pt-6 text-sm md:text-base">The 31-year-old self-taught engineer and former amateur racer spends his days building artful recreations of one of most iconic sports cars</div>
                                         </div>
                                         <div className="pt-3">
                                             <img src="/src/assets/img/car.jpg" alt=""/>
@@ -124,12 +124,7 @@ const Home = () =>{
                     <div className="container mx-auto px-5">
                         <div className="flex flex-row py-14">
                             <div className="flex flex-col">
-                                <BigArticleCard  className={'rounded-t-xl'} category={"Flights"} color={'text-blue-500'} img={'/src/assets/img/Image-0.svg'}  date={"Aug 6"} like={'23'} comment={"52"} title={'Passengers Suffer as Crowded Field Puts Pressure on Europe’s Airlines'} subtitle={"Weaker carriers have fallen by the wayside amid fierce competition, while others have been hit by bad luck. The result: thousands of canceled flights."}/>
-                                <BigArticleCard  color={'text-teal-400'} category={"Food"} img={'/src/assets/img/Image-1.svg'} date={"Oct 7"} like={'830'} comment={"23"} title={'Three Courses, 20 Euros: The Affordable Dining Renaissance in Paris'} subtitle={"The Los Angeles area, for all of its culinary diversity, has not historically been thought of as a haven for bread lovers. The area has a reputation as a place where gluten fears to tread."}/>
-                                <BigArticleCard  color={'text-orange-600'} category={"Science"} img={'/src/assets/img/Image-2.svg'} date={"Oct 11"} like={'129'} comment={"31"} title={'Watch the High-Flying Physics of a Plant’s Exploding Fruits'} subtitle={"Three undergradute physics majors and their professor worked out how the hairyflower wild petunia shoots tiny seeds more than 20 feet through the air"}/>
-                                <BigArticleCard  color={'text-teal-400'} category={"Health"} img={'/src/assets/img/Image-3.svg'} date={"Oct 19"}  like={'284'} comment={"233"}title={'How the Shape of Your Ears Affects What You Hear'} subtitle={"We’re able to locate sound because our brains grasp the shape of our ears. When that shape changes, we need time and practice to adapt. Ears are a peculiarly individual piece of anatomy."}/>
-                                <BigArticleCard color={'text-green-600'} category={"Science"} img={'/src/assets/img/Image-4.svg'} date={"Oct 22"} like={'1,293'} comment={"54"} title={'Forests Protect the Climate. A Future With More Storms Would Mean Trouble.'} subtitle={"With an increase in extreme weather expected in the years to come, forests could be changed permanently as the world continues to warm"}/>
-                                <BigArticleCard  className={'rounded-b-xl'} category={"Art & Design"} color={'text-purple-500'} date={"Oct 26"} like={'82'} comment={"72"} img={'/src/assets/img/Image-1.svg'} title={'New Contemporary Institute Reverberates in Richmond’s Historic Landscape'} subtitle={"The center, which will open in April, takes a bold look at race and other social issues that still resonate in the region as well as the nation. A new Institute for Contemporary Art is set to open."}/>
+                                <BigArticleCards/>
       
                             </div>
                             <div className="hidden sm:flex flex-col ml-7">
