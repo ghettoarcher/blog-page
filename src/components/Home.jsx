@@ -1,5 +1,5 @@
 import MiniArticleCard from "./MiniArticleCard"
-import RecommendedArticle from './RecommendedArticle'
+import RecommendedArticles from './RecommendedArticles'
 import BigArticleCards from "./BigArticleCards"
 import RecommendedCategory from "./RecommendedCategory"
 import PopularArticle from "./PopularArticle"
@@ -129,13 +129,7 @@ const Home = () =>{
                             </div>
                             <div className="hidden sm:flex flex-col ml-7">
                                 <div className=" text-gray-900 font-semibold bg-white py-4 px-6 border-b-2 rounded-t-xl">Recommended for you</div>
-                                <RecommendedArticle title={'Office Meetings Leave the Office'} img={"/src/assets/img/article-img-7.svg"} postTime={'5 minutes ago'}/>
-                                <RecommendedArticle title={'Experimental Vocal Music in Brooklyn'} img={"/src/assets/img/article-img-5.svg"} postTime={'7 minutes ago'}/>
-                                <RecommendedArticle title={'Google’s Influence Over Think Tanks'} img={"/src/assets/img/article-img-4.svg"} postTime={'9 minutes ago'}/>
-                                <RecommendedArticle title={'Homes for Sale in NYC and Connecticut'} img={"/src/assets/img/article-img-3.svg"} postTime={'10 minutes ago'}/>
-                                <RecommendedArticle title={'Are You There, Dad? It’s Me, Alice'} img={"/src/assets/img/article-img-2.svg"} postTime={'15 minutes ago'}/>
-                                <RecommendedArticle title={'The New Punk Look: Lacy and Colorful'} img={"/src/assets/img/article-img.svg"} postTime={'30 minutes ago'}/>
-                                <RecommendedArticle title={'Sunday Best in Harlem and Brooklyn'} img={"/src/assets/img/article-img-1.svg"} postTime={'34 minutes ago'}/>
+                                <RecommendedArticles/>
                                 <div className="text-center text-sm bg-white pt-2 pb-3 font-semibold rounded-b-xl cursor-pointer">Read more</div>
                 
                             </div>
