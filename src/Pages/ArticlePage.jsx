@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import ProfileCard from "../components/ProfileCard";
 import Tag from "../components/Tag";
 import Feedback from "../components/Feedback";
-import VerticalArticleCard from "../components/VerticalArticleCard";
+import VerticalArticleCards from "../components/VerticalArticleCards";
 import Comments from "../components/Comments";
 import ArticleNavigation from "../components/ArticleNavigation";
 import HeartIcon from '/src/assets/icons/Heart.svg';
@@ -86,10 +86,7 @@ const ArticlePage = ({postDate,likes,comments,shares}) =>{
                   <div className="bg-slate-100">
                         <div className="container max-w-6xl mx-auto px-5 ">
                               <div className="flex flex-row flex-wrap lg:flex-nowrap py-14 justify-between gap-2">
-                              <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
-                              <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
-                              <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
-                              <VerticalArticleCard title={'An Evangelist of Singaporean Food Has a New Pulpit'} img={'/src/assets/img/vertical-img.svg'} views={'1,904'} comments={'12'}/>
+                              <VerticalArticleCards/>
                               </div>
                         </div>
                   </div>
