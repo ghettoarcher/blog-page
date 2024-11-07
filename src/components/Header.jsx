@@ -132,24 +132,28 @@ export default function Header() {
               alignItems: "center",
             }}
           >
-            <Button
-              sx={{
-                backgroundColor: "transparent",
-                color: "white",
-                "&:hover": { backgroundColor: "grey" },
-              }}
-            >
-              Sign in
-            </Button>
-            <Button
-              sx={{
-                backgroundColor: "white",
-                color: "black",
-                "&:hover": { backgroundColor: "grey" },
-              }}
-            >
-              Sign up
-            </Button>
+            <Link to="/sign-in">
+              <Button
+                sx={{
+                  backgroundColor: "transparent",
+                  color: "white",
+                  "&:hover": { backgroundColor: "grey" },
+                }}
+              >
+                Sign in
+              </Button>
+            </Link>
+            <Link to={"/sign-up"}>
+              <Button
+                sx={{
+                  backgroundColor: "white",
+                  color: "black",
+                  "&:hover": { backgroundColor: "grey" },
+                }}
+              >
+                Sign up
+              </Button>
+            </Link>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
@@ -189,11 +193,9 @@ export default function Header() {
                   </Button>
                 </MenuItem>
                 <MenuItem>
-                  <Link to={"/sign-in"}>
-                    <Button color="primary" variant="outlined" fullWidth>
-                      Sign in
-                    </Button>
-                  </Link>
+                  <Button color="primary" variant="outlined" fullWidth>
+                    Sign in
+                  </Button>
                 </MenuItem>
               </Box>
             </Drawer>
