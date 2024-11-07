@@ -10,7 +10,7 @@ const HeaderArticles = () => {
           .catch(error => console.error('Error fetching posts:', error));
       }, []);
       return(
-            <div className="flex flex-row lg:flex-nowrap p-6 justify-between mx-7 bg-gray-700 rounded-md mb-7 ">
+            <div className="flex flex-row lg:flex-nowrap p-6 mt-20 justify-between mx-7 bg-gray-700 rounded-md mb-7 ">
             {posts.map((post, index) => (
                   <HeaderArticle key={index} post={post} />
              ))}
