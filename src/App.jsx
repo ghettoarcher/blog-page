@@ -1,10 +1,9 @@
-import Home from "./components/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ArticlePage from "./Pages/ArticlePage";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 function App() {
@@ -12,7 +11,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/post/:title" element={<ArticlePage />} />
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
       </Routes>

@@ -1,54 +1,256 @@
-import FooterColumn from "./FooterColumn"
-import Socials from './Socials';
-import Button from "./Button";
-const Footer = () => {
-      return(
-            <div>
-          <div className="container mx-auto px-5">
-              <div className="flex flex-col items-center mt-14 text-black ">
-                  <div className="text-3xl font-bold">Subscribe now and get 20% off</div>
-                  <div className="flex flex-row mt-6 mb-16 gap-3">
-                      <input className="border-2 rounded-xl mr-2 max-w-52 pl-5 pr-5" type="text" placeholder="Enter your email"/>
-                        <Button  text={'Subscribe'}/>
-              </div>
-              </div>
-              <div className="flex-row mb-10 container hidden lg:flex">
-                  <img src="/src/assets/icons/Line-5.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-4.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-3.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-2.svg" alt=""/>
-                  <img src="/src/assets/icons/Line-1.svg" alt=""/>
-                  <img src="/src/assets/icons/Line.svg" alt=""/>
-              </div>
-              <div className="flex flex-row justify-between pb-16 border-b-2 text-black">
-                    <FooterColumn title={'News'} links={['Nation','World','Politics','Solar Eclipse']}/>
-                    <FooterColumn title={'Arts'} links={['Art & Design','Movies','People','Video: Arts', 'Theater']}/>
-                    <FooterColumn title={'Travel'} links={['Destinations','Flights','Business Travel']}/>
-                    <FooterColumn title={'Sports'} links={['Olympics','Motor Sports','Volleyball','MMA','Cycling']}/>
-                    <FooterColumn title={'Tech'} links={['Tech News','Tech Columnists','Tech Reviews','Talking Tech']}/>
-                    <FooterColumn title={'News'} links={['Money','Markets','Business','Personal Finance','Retirement','Careers']}/>
-              </div>
-              <div>
-                  <div className="flex flex-row items-center  justify-between py-7 border-b-2">
-                      <div className="flex flex-row items-center">
-                          <a href="#" className="pr-7"><img src="/src/assets/icons/Symbol.svg" alt=""/></a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Contact Us</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Work with Us</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Advertise</a>
-                          <a href="#" className="uppercase pr-7 font-medium text-sm md:text-md">Your Ad Choise</a>
-                      </div> 
-                    <Socials/>
-                  </div>
-              </div>
-              <div className="flex flex-row justify-between text-gray-500 mt-10 mb-14 text-sm ">
-                  <div>Universal’s business concept is to offer fashion and quality at the best price in a sustainable way. Universal has since it was <br/> founded in 2015 grown into one of the world's leading fashion companies. </div>
-                  <div>© 2019 Universal UI Kit</div>
-              </div>
-              
-          </div>
-        
-      </div>
-      )
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import InputLabel from "@mui/material/InputLabel";
+import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import FacebookIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/X";
+
+function Copyright() {
+  return (
+    <Typography variant="body2" sx={{ color: "white", mt: 1 }}>
+      {"Copyright © "}
+      &nbsp;
+      {new Date().getFullYear()}
+    </Typography>
+  );
 }
 
-export default Footer;
+export default function Footer() {
+  return (
+    <React.Fragment>
+      <Divider />
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: { xs: 4, sm: 8 },
+          py: { xs: 8, sm: 10 },
+          textAlign: { sm: "center", md: "left" },
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
+            width: "100%",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 4,
+              minWidth: { xs: "100%", sm: "60%" },
+            }}
+          >
+            <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
+              <Typography
+                variant="body2"
+                gutterBottom
+                sx={{ fontWeight: 600, mt: 2 }}
+                color="white"
+              >
+                Join the newsletter
+              </Typography>
+              <Typography color="primary" variant="body2" sx={{ mb: 2 }}>
+                Subscribe for weekly updates. No spams ever!
+              </Typography>
+              <InputLabel
+                color="Outlined primary"
+                htmlFor="email-newsletter"
+                sx={{ color: "white" }}
+              >
+                Email
+              </InputLabel>
+              <Stack direction="row" spacing={1} useFlexGap>
+                <TextField
+                  id="email-newsletter"
+                  hiddenLabel
+                  size="small"
+                  variant="outlined"
+                  fullWidth
+                  aria-label="Enter your email address"
+                  placeholder="Your email address"
+                  slotProps={{
+                    htmlInput: {
+                      autoComplete: "off",
+                      "aria-label": "Enter your email address",
+                    },
+                  }}
+                  sx={{
+                    width: "250px",
+                    "& .MuiInputBase-input": {
+                      color: "white", // Цвет вводимого текста
+                    },
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  sx={{ flexShrink: 0 }}
+                >
+                  Subscribe
+                </Button>
+              </Stack>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              flexDirection: "column",
+              gap: 1,
+            }}
+          >
+            <Typography
+              color="white"
+              variant="body2"
+              sx={{ fontWeight: "medium" }}
+            >
+              Product
+            </Typography>
+            <Link color="info" variant="body2" href="#">
+              Features
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Testimonials
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Highlights
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Pricing
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              FAQs
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              flexDirection: "column",
+              gap: 1,
+            }}
+          >
+            <Typography
+              color="white"
+              variant="body2"
+              sx={{ fontWeight: "medium" }}
+            >
+              Company
+            </Typography>
+            <Link color="info" variant="body2" href="#">
+              About us
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Careers
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Press
+            </Link>
+          </Box>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "flex" },
+              flexDirection: "column",
+              gap: 1,
+            }}
+          >
+            <Typography
+              variant="body2"
+              sx={{ fontWeight: "medium" }}
+              color="white"
+            >
+              Legal
+            </Typography>
+            <Link color="info" variant="body2" href="#">
+              Terms
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Privacy
+            </Link>
+            <Link color="info" variant="body2" href="#">
+              Contact
+            </Link>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            pt: { xs: 4, sm: 8 },
+            width: "100%",
+            borderTop: "1px solid",
+            borderColor: "divider",
+          }}
+        >
+          <div>
+            <Link
+              color="text.primary"
+              variant="body2"
+              href="#"
+              sx={{ color: "white" }}
+            >
+              Privacy Policy
+            </Link>
+            <Typography sx={{ display: "inline", mx: 0.5, opacity: 0.5 }}>
+              &nbsp;•&nbsp;
+            </Typography>
+            <Link
+              color="text.secondary"
+              variant="body2"
+              href="#"
+              sx={{ color: "white" }}
+            >
+              Terms of Service
+            </Link>
+            <Copyright />
+          </div>
+          <Stack
+            direction="row"
+            spacing={1}
+            useFlexGap
+            sx={{ justifyContent: "left", color: "text.secondary" }}
+          >
+            <IconButton
+              color="primary"
+              size="small"
+              href="https://github.com/mui"
+              aria-label="GitHub"
+              sx={{ alignSelf: "center", color: "white" }}
+            >
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              href="https://x.com/MaterialUI"
+              aria-label="X"
+              sx={{ alignSelf: "center", color: "white" }}
+            >
+              <TwitterIcon />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              size="small"
+              href="https://www.linkedin.com/company/mui/"
+              aria-label="LinkedIn"
+              sx={{ alignSelf: "center", color: "white" }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Stack>
+        </Box>
+      </Container>
+    </React.Fragment>
+  );
+}
